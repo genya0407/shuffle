@@ -6,7 +6,7 @@ RSpec.describe Shuffle do
   end
 
   it "shuffle given string" do
-    original_string = 'abcdefghijklmnopqrstu'
+    original_string = "abcdefghijklmnopqrstu"
 
     expect(Shuffle.new(original_string).shuffle).not_to eq original_string
     expect(Shuffle.new(original_string).shuffle.chars.sort.join).to eq original_string.chars.sort.join
