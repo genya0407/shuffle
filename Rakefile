@@ -14,4 +14,4 @@ Rake::ExtensionTask.new("shuffle") do |ext|
   ext.source_pattern = "*.{rs,toml}"
 end
 
-task default: %i[spec standard]
+task default: %i[compile spec standard]
