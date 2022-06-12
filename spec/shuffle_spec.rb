@@ -5,7 +5,10 @@ RSpec.describe Shuffle do
     expect(Shuffle::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "shuffle given string" do
+    original_string = 'abcdefghijklmnopqrstu'
+
+    expect(Shuffle.new(original_string).shuffle).not_to eq original_string
+    expect(Shuffle.new(original_string).shuffle.chars.sort.join).to eq original_string.chars.sort.join
   end
 end
